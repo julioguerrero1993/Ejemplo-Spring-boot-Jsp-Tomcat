@@ -10,6 +10,7 @@ public class WelcomeController {
 	
 	@RequestMapping("/")
 	public String index(Map<String, Object>model) {
+		model.put("message", "QUE SUCEDE!");
 		return "index";
 	}
 }
