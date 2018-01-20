@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<c:url value="/css/main.css" var="jstlCss" />
 	<link href="${jstlCss}" rel="stylesheet" />
-	<title>Mi Curso CTM</title>
+	<title>Mi Curso</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,11 +21,13 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-diamond"></span>
+							<span class="icon"><i class="fa fa-book" style="font-size:40px" aria-hidden="true"></i></span>
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Mi Curso</h1>
+							<c:forEach items="${alumnos}" var="alumno">
+								<h1>Datos de prueba : nombre ${alumno.getNombre()} edad ${alumno.getEdad()}</h1>
+							</c:forEach>
 								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
 								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
 							</div>
